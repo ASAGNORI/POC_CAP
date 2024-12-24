@@ -1,0 +1,75 @@
+_schema-version: 3.3.0
+ID: POC_CAP
+description: A simple CAP project.
+version: 1.0.0
+modules:
+  - name: POC_CAP-srv
+    type: nodejs
+    path: gen/srv
+    requires:
+      - name: POC_CAP-db
+      - name: POC_CAP-auth
+    provides:
+      - name: srv-api
+        properties:
+          srv-url: ${default-url}
+    parameters:
+      buildpack: nodejs_buildpack
+      readiness-health-check-http-endpoint: /health
+      readiness-health-check-type: http
+    build-parameters:
+      builder: npm
+  - name: POC_CAP-db-deployer
+    type: hdb
+    path: gen/db
+    requires:
+      - name: POC_CAP-db
+        properties:
+          TARGET_CONTAINER: ~{hdi-container-name}
+    parameters:
+      buildpack: nodejs_buildpack
+  - name: POC_CAP
+    type: approuter.nodejs
+    path: app/router
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          forwardAuthToken: true
+          name: srv-api
+          url: ~{srv-url}
+      - name: POC_CAP-auth
+    provides:
+      - name: app-api
+        properties:
+          app-protocol: ${protocol}
+          app-uri: ${default-uri}
+    parameters:
+      disk-quota: 256M
+      keep-existing-routes: true
+      memory: 256M
+resources:
+  - name: POC_CAP-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+    properties:
+      hdi-container-name: ${service-name}
+  - name: POC_CAP-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      config:
+        tenant-mode: dedicated
+        xsappname: POC_CAP-${org}-${space}
+      path: ./xs-security.json
+      service: xsuaa
+      service-plan: application
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production

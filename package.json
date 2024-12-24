@@ -1,0 +1,54 @@
+{
+  "name": "POC_CAP",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap/cds": "^8",
+    "@sap/cds-common-content": "^2.1.0",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.7.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8",
+    "@sap/hdi-deploy": "^5.3.2",
+    "@sap/ux-ui5-tooling": "^1.16.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-interaction_items": "cds watch --open interaction_items/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "auth": "xsuaa",
+      "db": "hana",
+      "[production]": {
+        "auth": "xsuaa",
+        "db": "hana"
+      },
+      "[hybrid]": {
+        "auth": "xsuaa"
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "sql": {
+      "native_hana_associations": false
+    }
+  },
+  "fiori": {
+    "preview": true
+  },
+  "server": {
+    "index": true
+  },
+  "sapux": [
+    "app/interaction_items"
+  ]
+}

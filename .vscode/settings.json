@@ -1,0 +1,7 @@
+{
+    "SAP HANA Project Explorer.deploy.auto clean deployment log": true,
+    "SAP HANA Project Explorer.deploy.enable deployment tracing": true,
+    "SAP HANA Project Explorer.deploy.keep default-env file": true,
+    "SAP HANA Project Explorer.unbind.unbind all services if the Cloud Foundry space changes": true,
+    "SAP HANA Project Explorer.bind.bind user-provided services to target containers": true
+}
