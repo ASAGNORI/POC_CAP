@@ -15,11 +15,5 @@
       "scope-references": ["$XSAPPNAME.Admin"],
       "attribute-references": []
     }
-  ],
-  "oauth2-configuration": {
-    "redirect-uris": [
-      "https://api.cf.us10-001.hana.ondemand.com/**"
-
-    ]
-  }
+  ]
 }
