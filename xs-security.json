@@ -1,5 +1,5 @@
 {
-  "xsappname": "POC_CAP-aut",
+  "xsappname": "POC_CAP-auth",
   "tenant-mode": "dedicated",
   "scopes": [
     {
@@ -12,9 +12,7 @@
     {
       "name": "Admin",
       "description": "generated",
-      "scope-references": [
-        "$XSAPPNAME.Admin"
-      ],
+      "scope-references": ["$XSAPPNAME.Display"],
       "attribute-references": []
     }
   ],
