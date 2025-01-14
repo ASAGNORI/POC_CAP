@@ -1,4 +1,4 @@
-//namespace app.interactions;
+namespace app.interactions;
 
 using {
     Country,

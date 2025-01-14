@@ -2,7 +2,10 @@
   "name": "POC_CAP",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": {
+    "type": "git",
+    "url": "<Add your repository here>"
+  },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -50,5 +53,7 @@
   },
   "sapux": [
     "app/interaction_items"
-  ]
+  ],
+  "main": "xs-security.js",
+  "author": "contato@sagnori.eti.br"
 }
