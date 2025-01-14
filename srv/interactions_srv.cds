@@ -21,6 +21,6 @@ function sleep() returns Boolean;
 entity HeaderView as projection on interactions.Headers;
 
 //@readonly
-//entity V_INTERACTIONS as projection on V_INTERACTIONS;
+//entity V_INTERACTIONS as projection on HeaderView;
 
 }
