@@ -1,6 +1,6 @@
 {
   "xsappname": "POC_CAP-auth",
-  "tenant-mode": "dedicated",
+  "tenant-mode": "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.Admin",
