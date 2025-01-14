@@ -12,7 +12,7 @@
     {
       "name": "Admin",
       "description": "generated",
-      "scope-references": ["$XSAPPNAME.Display"],
+      "scope-references": ["$XSAPPNAME.Admin"],
       "attribute-references": []
     }
   ],
