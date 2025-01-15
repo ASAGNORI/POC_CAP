@@ -5,7 +5,7 @@ version: 1.0.0
 modules:
   - name: POC_CAP-srv
     type: nodejs
-    path: gen/srv
+    path: srv
     requires:
       - name: POC_CAP-db
       - name: POC_CAP-auth

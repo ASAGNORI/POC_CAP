@@ -14,7 +14,8 @@
     "@sap/cds-common-content": "^2.1.0",
     "@sap/hana-client": "^2.23.24",
     "@sap/xssec": "^4",
-    "express": "^4"
+    "express": "^4",
+    "hdb": "^0.19.12"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.7.0",
