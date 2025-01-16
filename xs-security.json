@@ -1,6 +1,6 @@
 {
   "xsappname": "POC_CAP-auth",
-  "tenant-mode": "dedicated",
+  "tenant-mode": "shared",
   "scopes": [
     {
       "name": "$XSAPPNAME.Admin",
@@ -11,7 +11,7 @@
   "role-templates": [
     {
       "name": "Admin",
-      "description": "generated",
+      "description": "Administrator Role",
       "scope-references": ["$XSAPPNAME.Admin"],
       "attribute-references": []
     }
