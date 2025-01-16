@@ -35,16 +35,22 @@
     "requires": {
       "auth": "xsuaa",
       "db": {
-        "kind": "hana"
+        "kind": "hana",
+        "model": "*"
       },
       "[production]": {
         "auth": "xsuaa",
         "db": {
-          "kind": "hana"
+          "kind": "hana",
+          "model": "*"
         }
       },
       "[hybrid]": {
-        "auth": "xsuaa"
+        "auth": "xsuaa",
+        "db": {
+          "kind": "hana",
+          "model": "*"
+        }
       }
     },
     "sql": {

@@ -4,7 +4,7 @@ annotate service.Interactions_Header with @(
 UI.HeaderInfo                : {
     Title         : {
         $Type: 'UI.DataField',
-        Value: partner,
+        Value:  partner,
     },
     TypeName      : 'Incident',
     TypeNamePlural: 'Incidens',
