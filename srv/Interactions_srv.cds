@@ -4,7 +4,7 @@ using V_INTERACTIONS from '../db/Interactions';
 
 service CatalogService {
 
-@requires           : 'authenticated-user'
+@requires: 'Admin'
 @cds.redirection.target
 @odata.draft.enabled: true
 entity Interactions_Header as projection on interactions.Headers;
@@ -24,3 +24,4 @@ function sleep() returns Boolean;
 @readonly
 entity V_Interactions as projection on V_INTERACTIONS;
 }
+
