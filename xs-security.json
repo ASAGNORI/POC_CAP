@@ -12,7 +12,9 @@
     {
       "name": "Admin",
       "description": "Administrator Role",
-      "scope-references": ["$XSAPPNAME.Admin"],
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
       "attribute-references": []
     }
   ],
@@ -20,7 +22,7 @@
     "credential-types": [
       "binding-secret",
       "x509"
-  ],
+    ],
     "redirect-uris": [
       "https://POC_CAP.cfapps.us10-001.hana.ondemand.com/**"
     ]
