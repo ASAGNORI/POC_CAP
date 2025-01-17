@@ -4,12 +4,12 @@ using V_INTERACTIONS from '../db/Interactions';
 
 service CatalogService {
 
-@requires: 'Admin'
+//@requires: 'Admin'
 @cds.redirection.target
 @odata.draft.enabled: true
 entity Interactions_Header as projection on interactions.Headers;
 
-@requires: 'Admin'
+//@requires: 'Admin'
 entity Interactions_Items as projection on interactions.Items;
 
 @readonly
