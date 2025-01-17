@@ -10,10 +10,10 @@ service CatalogService {
 entity Interactions_Header as projection on interactions.Headers;
 
 @requires: 'Admin'
-entity Interactions_Items  as projection on interactions.Items;
+entity Interactions_Items as projection on interactions.Items;
 
 @readonly
-entity Languages           as projection on sap.common.Languages;
+entity Languages as projection on sap.common.Languages;
 
 @readonly
 @restrict: [{ grant: 'READ', where: 'country_code = ''DE'''}]

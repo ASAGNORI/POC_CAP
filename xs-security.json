@@ -4,7 +4,7 @@
   "scopes": [
     {
       "name": "$XSAPPNAME.Admin",
-      "description": "Admin"
+      "description": "Admin access"
     }
   ],
   "attributes": [],
@@ -12,9 +12,13 @@
     {
       "name": "Admin",
       "description": "Administrator Role",
-      "scope-references": [
-        "$XSAPPNAME.Admin"
-      ],
+      "scope-references": ["$XSAPPNAME.Admin"],
+      "attribute-references": []
+    },
+    {
+      "name": "User",
+      "description": "User Role",
+      "scope-references": ["$XSAPPNAME.Admin"],
       "attribute-references": []
     }
   ],
