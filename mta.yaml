@@ -18,6 +18,8 @@ modules:
       buildpack: nodejs_buildpack
       readiness-health-check-type: http
       readiness-health-check-http-endpoint: /health
+      disk-quota: 512M
+      memory: 512M
     build-parameters:
       builder: npm
     provides:
@@ -35,6 +37,8 @@ modules:
       buildpack: nodejs_buildpack
       service: hana
       service-plan: hdi-shared
+      disk-quota: 512M
+      memory: 256M
     requires:
       - name: POC_CAP-db
 
@@ -43,8 +47,8 @@ modules:
     path: app/router
     parameters:
       keep-existing-routes: true
-      disk-quota: 256M
-      memory: 256M
+      disk-quota: 1G
+      memory: 512M
     requires:
       - name: srv-api
         group: destinations
