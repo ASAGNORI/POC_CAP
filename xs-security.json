@@ -22,5 +22,14 @@
       "description": "User Role",
       "scope-references": ["$XSAPPNAME.User"]
     }
-  ]
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+      "binding-secret",
+      "x509"
+    ],
+    "redirect-uris": [
+      "https://POC_CAP.cfapps.us10-001.hana.ondemand.com/**"
+    ]
+  }
 }
