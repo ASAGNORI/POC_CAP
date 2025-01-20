@@ -5,30 +5,22 @@
     {
       "name": "$XSAPPNAME.Admin",
       "description": "Admin access"
+    },
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "User access"
     }
   ],
-  "attributes": [],
   "role-templates": [
     {
       "name": "Admin",
       "description": "Administrator Role",
-      "scope-references": ["$XSAPPNAME.Admin"],
-      "attribute-references": []
+      "scope-references": ["$XSAPPNAME.Admin"]
     },
     {
       "name": "User",
       "description": "User Role",
-      "scope-references": ["$XSAPPNAME.Admin"],
-      "attribute-references": []
+      "scope-references": ["$XSAPPNAME.User"]
     }
-  ],
-  "oauth2-configuration": {
-    "credential-types": [
-      "binding-secret",
-      "x509"
-    ],
-    "redirect-uris": [
-      "https://POC_CAP.cfapps.us10-001.hana.ondemand.com/**"
-    ]
-  }
+  ]
 }
