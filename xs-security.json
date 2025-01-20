@@ -1,6 +1,6 @@
 {
   "xsappname": "POC_CAP-auth",
-  "tenant-mode": "shared",
+  "tenant-mode": "dedicated",
   "scopes": [
     {
       "name": "$XSAPPNAME.Admin",
@@ -15,12 +15,16 @@
     {
       "name": "Admin",
       "description": "Administrator Role",
-      "scope-references": ["$XSAPPNAME.Admin"]
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
     },
     {
       "name": "User",
       "description": "User Role",
-      "scope-references": ["$XSAPPNAME.User"]
+      "scope-references": [
+        "$XSAPPNAME.User"
+      ]
     }
   ],
   "oauth2-configuration": {
@@ -31,5 +35,6 @@
     "redirect-uris": [
       "https://POC_CAP.cfapps.us10-001.hana.ondemand.com/**"
     ]
-  }
+  },
+  "attributes": []
 }
