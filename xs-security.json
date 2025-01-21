@@ -33,7 +33,7 @@
       "x509"
     ],
     "redirect-uris": [
-      "https://POC_CAP.cfapps.us10-001.hana.ondemand.com/**"
+      "https://8488eb65trial-8488eb65trial-ext-dev-poc-cap.cfapps.us10-001.hana.ondemand.com/**"
     ]
   },
   "attributes": []

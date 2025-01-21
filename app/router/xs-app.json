@@ -1,15 +1,10 @@
 {
   "authenticationMethod": "route",
-  "logout": {
-    "logoutEndpoint": "/app-logout",
-    "logoutPage": "/"
-  },
   "routes": [
     {
       "source": "^/app/(.*)$",
       "target": "$1",
-      "localDir": ".",
-      "cacheControl": "no-cache, no-store, must-revalidate",
+      "destination": "srv-api",
       "authenticationType": "xsuaa"
     },
     {
@@ -26,5 +21,9 @@
       "cacheControl": "no-cache, no-store, must-revalidate",
       "authenticationType": "none"
     }
-  ]
+  ],
+  "logout": {
+    "logoutEndpoint": "/app-logout",
+    "logoutPage": "/"
+  }
 }
