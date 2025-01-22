@@ -1,29 +1,22 @@
 {
   "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/app-logout",
+    "logoutPage": "/"
+  },
   "routes": [
-    {
-      "source": "^/app/(.*)$",
-      "target": "$1",
-      "destination": "srv-api",
-      "authenticationType": "xsuaa"
-    },
     {
       "source": "^/odata/v4/catalog/(.*)$",
       "target": "/odata/v4/catalog/$1",
       "destination": "srv-api",
-      "csrfProtection": true,
       "authenticationType": "xsuaa",
-      "scope": ["$XSAPPNAME.Admin"]
+      "csrfProtection": true
     },
     {
-      "source": "^/appconfig/",
-      "localDir": ".",
-      "cacheControl": "no-cache, no-store, must-revalidate",
+      "source": "^(.*)$",
+      "target": "$1",
+      "localDir": "resources",
       "authenticationType": "none"
     }
-  ],
-  "logout": {
-    "logoutEndpoint": "/app-logout",
-    "logoutPage": "/"
-  }
+  ]
 }
