@@ -10,14 +10,15 @@
     "@sap/cds": "^8",
     "@sap/cds-common-content": "^2.1.0",
     "@sap/xssec": "^4",
-    "express": "^4"
+    "express": "^4",
+    "tar": "^6.2.1"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.8.0",
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^8",
-    "rimraf": "^5.0.5",
-    "mbt": "^1.2.29"
+    "mbt": "^1.2.29",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
     "start": "cds-serve",
